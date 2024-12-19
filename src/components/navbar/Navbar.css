@@ -1,0 +1,80 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 20px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 60px;
+    font-size: 16px;
+}
+
+.name-logo {
+    height: 10vmin;
+    pointer-events: none;
+}
+
+.nav-menu-btn {
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: var(--primary-color);
+}
+
+.nav-menu-btn:hover {
+    transform: scale(1.05);
+}
+
+.nav-mobile-menu-open {
+    display: none;
+}
+
+.nav-mobile-menu-close {
+    display: none;
+}
+
+@media(max-width: 768px) {
+    .navbar{
+        margin: 10px 10px;  
+    }
+    .nav-menu-btn {
+        display: none;
+    }
+    .nav-mobile-menu-open{
+        display: block;
+        position: fixed;
+        right: 20px
+    }
+    .nav-mobile-menu-close {
+        display: block;
+        position: relative;
+        top: 20px;
+        left: 290px;
+        width: 30px;
+    }
+    .nav-menu{
+        position: fixed;
+        flex-direction: column;
+        align-items: start;
+        top: 0;
+        gap: 30px;
+        width: 350px;
+        height: 100%;
+        z-index: 2;
+        transition: right 0.5s;
+        background-color: var(--body-background);
+        right: -350px;
+    }
+    .nav-menu li {
+        font-size: 20px;
+        padding-left: 100px;
+        flex-direction: row;
+        gap: 20px;
+    }
+}
